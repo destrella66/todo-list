@@ -1,8 +1,9 @@
 let takeNotes = document.getElementById("take-notes");
-const addNote = document.getElementById("addNote");
+let addNote = document.getElementById("addNote");
 let noteId = document.getElementById("noteId");
 const deleteNote = document.getElementById("deleteNote");
 let  noteBox = document.getElementsByClassName("noteBox");
+let receiveNotes = document.getElementById("receiveNotes")
 
 
 addNote.addEventListener("click", () => {
@@ -11,7 +12,7 @@ addNote.addEventListener("click", () => {
         alert("Enter a note!");
     }
     else{
-        takeNotes.innerHTML +=`
+        receiveNotes.innerHTML +=`
             <div class="noteBox">
                 <span>
                     ${noteId.value}
@@ -21,6 +22,7 @@ addNote.addEventListener("click", () => {
                 </button>
             </div>
         `;
+        noteId.value = "";
             
         
     }
