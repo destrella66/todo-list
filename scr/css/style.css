@@ -57,11 +57,12 @@
   margin-bottom: 20px;
   border-radius: 10px;
   transition: 0.3s;
-  color: white;
+  color: #0e0e0e;
 }
 
 #noteId:focus {
   background-color: #0071d3;
+  color: white;
 }
 #noteId:focus::placeholder {
   color: white;
@@ -75,6 +76,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  height: 45px;
+  min-height: 45px;
   border-radius: 10px;
 }
