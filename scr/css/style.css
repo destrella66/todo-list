@@ -44,6 +44,10 @@
   color: #fafafa;
   border-radius: 10px;
   font-weight: 600;
+  transition: 0.3s;
+}
+#addNote:active {
+  transform: scale(0.7);
 }
 #noteId {
   width: 100%;
@@ -62,7 +66,6 @@
 #noteId:focus::placeholder {
   color: white;
   outline: none;
-  pointer-events: none;
 }
 .noteBox {
   border: 2px solid #0071d3;

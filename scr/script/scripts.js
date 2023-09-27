@@ -1,7 +1,6 @@
 let takeNotes = document.getElementById("take-notes");
 let addNote = document.getElementById("addNote");
 let noteId = document.getElementById("noteId");
-const deleteNote = document.getElementById("deleteNote");
 let  noteBox = document.getElementsByClassName("noteBox");
 let receiveNotes = document.getElementById("receiveNotes")
 
@@ -17,13 +16,22 @@ addNote.addEventListener("click", () => {
                 <span>
                     ${noteId.value}
                 </span>
-                <button class=”delete”>
-                    X
-                </button>
+                <button id="deleteButton">Excluir</button>
+                
             </div>
         `;
+        let deleteButton = document.getElementById("deleteButton");
+
+deleteButton.onclick = function () {
+    // Use "this" para se referir ao botão que foi clicado
+    receiveNotes.removeChild(this.parentElement);
+};
+
         noteId.value = "";
-            
+
+
+       
         
+
     }
-});
+});    
