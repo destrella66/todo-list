@@ -18,6 +18,7 @@
 }
 #take-notes {
   position: relative;
+  flex-direction: column;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -26,17 +27,23 @@
   background-color: #fafafa;
   padding: 20px 10px;
   border-radius: 10px;
-  align-items: center;
-  justify-content: space-between;
 }
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-bottom: 12px;
 }
 .header h1 {
   font-size: 38px;
+}
+
+.textNote {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
 }
 #addNote {
   padding: 10px 20px;
@@ -44,17 +51,18 @@
   color: #fafafa;
   border-radius: 10px;
   font-weight: 600;
+  width: 20%;
   transition: 0.3s;
+  margin: 0;
 }
 #addNote:active {
   transform: scale(0.7);
 }
 #noteId {
-  width: 100%;
+  width: 75%;
   height: 45px;
   border: 2px solid #0071d3;
   padding: 10px;
-  margin-bottom: 20px;
   border-radius: 10px;
   transition: 0.3s;
   color: #0e0e0e;
